@@ -48,7 +48,7 @@ HydraTrack ("we," "our," or "us") is an Android app. HydraTrack is a hydration t
 ## Data Sharing
 
 ### Family Groups
-- HydraTrack does not use MyFamilyTracker-style family groups unless explicitly described in this policy.
+- HydraTrack does not use family groups unless explicitly described in this policy.
 - If this app includes pairing, sharing, or collaboration features, data is shared only with the people or services required for the feature you choose.
 - You control feature use through the app settings, permissions, account controls, or platform settings.
 
