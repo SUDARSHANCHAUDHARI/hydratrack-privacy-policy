@@ -29,7 +29,7 @@
   <main>
     <article>
       <h1>HydraTrack — Privacy Policy</h1>
-      <p><strong>Effective Date:</strong> 2026-03-21 <strong>Last Updated:</strong> 2026-11-08 <strong>Version:</strong> 1.0.0</p>
+      <p><strong>Effective Date:</strong> 2026-03-21 <strong>Last Updated:</strong> 2026-11-08 <strong>Version:</strong> 1.2.0</p>
       <p>Published by <strong>Sudarshan Tech Labs</strong> | <a href="https://sudarshantechlabs.com">https://sudarshantechlabs.com</a> | sudarshantechlabs@gmail.com</p>
       <hr>
       <p>HydraTrack is a hydration tracking app for Android. It helps you log daily water intake and set hydration goals. All data is stored locally on your device, and the App has no internet access.</p>
@@ -134,6 +134,20 @@
       <tr><td>Hydration logs</td><td>No (on-device only)</td><td>No</td><td>Hydration tracking</td></tr>
       </tbody></table>
       <hr>
+      <hr>
+      <h2>Recent Updates (Version 1.2.0 - November 8, 2026)</h2>
+      <ul>
+      <li><strong>Replaced the template text with the policy from the app repository,</strong> which has been accurate since October 2026: local-only Room storage, no account, no analytics, no internet access. The published page had drifted into a separate document making different claims.</li>
+      <li><strong>Removed the boilerplate</strong> claiming protection by "the browser, Firebase, Google, GitHub" — HydraTrack uses none of them — and the scaffold location sections, for an app that requests no location.</li>
+      <li><strong>Listed the five permissions Android libraries merge in</strong> — <code>ACCESS_NETWORK_STATE</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>FOREGROUND_SERVICE</code> and <code>BIND_JOB_SERVICE</code> from WorkManager, and <code>DUMP</code> — since the app declares three while the Play Store shows all eight.</li>
+      <li><strong>Explained that <code>ACCESS_NETWORK_STATE</code> does not grant network access,</strong> because it looks alarming in a policy claiming none. <code>INTERNET</code> is absent from the merged manifest, which is what makes the no-internet claim true of the installed build.</li>
+      </ul>
+      <hr>
+      <h2>Recent Updates (Version 1.1.0 - May 17, 2026)</h2>
+      <ul>
+      <li><strong>Aligned policy with the shared privacy-policy structure.</strong></li>
+      <li><strong>Clarified local hydration logs, reminders, and permissions.</strong></li>
+      </ul>
       <hr>
       <p><strong>This privacy policy complies with:</strong></p>
       <ul>

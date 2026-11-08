@@ -2,7 +2,7 @@
 
 **Effective Date:** 2026-03-21
 **Last Updated:** 2026-11-08
-**Version:** 1.0.0
+**Version:** 1.2.0
 
 Published by **Sudarshan Tech Labs** | https://sudarshantechlabs.com | sudarshantechlabs@gmail.com
 
@@ -135,6 +135,22 @@ To exercise these rights, contact us at the details above.
 | Hydration logs | No (on-device only) | No | Hydration tracking |
 
 ---
+
+---
+
+## Recent Updates (Version 1.2.0 - November 8, 2026)
+
+- **Replaced the template text with the policy from the app repository,** which has been accurate since October 2026: local-only Room storage, no account, no analytics, no internet access. The published page had drifted into a separate document making different claims.
+- **Removed the boilerplate** claiming protection by "the browser, Firebase, Google, GitHub" — HydraTrack uses none of them — and the scaffold location sections, for an app that requests no location.
+- **Listed the five permissions Android libraries merge in** — `ACCESS_NETWORK_STATE`, `RECEIVE_BOOT_COMPLETED`, `FOREGROUND_SERVICE` and `BIND_JOB_SERVICE` from WorkManager, and `DUMP` — since the app declares three while the Play Store shows all eight.
+- **Explained that `ACCESS_NETWORK_STATE` does not grant network access,** because it looks alarming in a policy claiming none. `INTERNET` is absent from the merged manifest, which is what makes the no-internet claim true of the installed build.
+
+---
+
+## Recent Updates (Version 1.1.0 - May 17, 2026)
+
+- **Aligned policy with the shared privacy-policy structure.**
+- **Clarified local hydration logs, reminders, and permissions.**
 
 ---
 
