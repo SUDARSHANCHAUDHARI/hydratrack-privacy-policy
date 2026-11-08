@@ -1,208 +1,150 @@
-# HydraTrack Privacy Policy
+# HydraTrack — Privacy Policy
 
-**Effective Date:** May 17, 2026
-_Last updated: May 17, 2026_
-**Version:** 1.1.0
+**Effective Date:** 2026-03-21
+**Last Updated:** 2026-11-08
+**Version:** 1.0.0
 
-HydraTrack ("we," "our," or "us") is an Android app. HydraTrack is a hydration tracker for Android that stores water logs, goals, reminders, and preferences locally on your device. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using HydraTrack you agree to the practices described below.
+Published by **Sudarshan Tech Labs** | https://sudarshantechlabs.com | sudarshantechlabs@gmail.com
 
-## Information We Collect
+---
 
-### Location Data
-- HydraTrack does not collect location data.
+HydraTrack is a hydration tracking app for Android. It helps you log daily water intake and set hydration goals. All data is stored locally on your device, and the App has no internet access.
 
-### Account Information
-- No account is required to use HydraTrack.
+---
 
-### Device Information
-- Water intake logs, hydration goals, reminder schedules, and app preferences are stored locally.
+## Data Collection
 
-## How We Use Your Information
+### Data Stored Locally on Your Device
 
-### Location Sharing
-- HydraTrack does not use your location.
+| Data | Purpose | Storage |
+|---|---|---|
+| Water intake logs (amount, time, date) | Core hydration tracking | Room database on your device |
+| Daily hydration goals and settings | Personalisation | DataStore on your device |
+| App preferences | Personalisation | DataStore on your device |
 
-### Account Management
-- Track water intake and hydration goals.
-- Send reminders and maintain local preferences.
+---
 
-### Service Improvement
-- Improve local hydration tracking and reminder reliability.
-- We do not sell, rent, or monetize your hydration data.
+## How We Use Your Data
 
-## Storage and Retention
+| Purpose | Data Used |
+|---|---|
+| Track and display daily water intake | Local hydration logs |
+| Send hydration reminder notifications | Local WorkManager schedules |
 
-### Data Storage
-- Hydration logs, goals, and preferences are stored locally using on-device storage such as Room/DataStore.
-- No Sudarshan Tech Labs cloud server is used for hydration data.
+---
 
-### Data Retention
-- Local hydration data remains until you delete it, clear app data, or uninstall the app.
+## Data Storage and Security
 
-### Data Security
-- Data is protected using platform security controls available on Android, the browser, Firebase, Google, GitHub, or other services named in this policy.
-- Local data remains on your device or browser unless a feature you use requires a named third-party service.
-- Network communication uses HTTPS/TLS where applicable.
-- You should protect your device, browser profile, and Google/GitHub accounts with strong authentication.
+- **Hydration data:** Stored in a Room database in the App's private directory
+- **No Sudarshan Tech Labs cloud storage:** We operate no backend server
+- **Android sandbox:** Data is protected by Android's application sandboxing
+
+## Data Retention
+
+| Data | Retention |
+|---|---|
+| Local hydration data | Until you delete it or uninstall the App |
+
+---
 
 ## Data Sharing
 
-### Family Groups
-- HydraTrack does not use family groups unless explicitly described in this policy.
-- If this app includes pairing, sharing, or collaboration features, data is shared only with the people or services required for the feature you choose.
-- You control feature use through the app settings, permissions, account controls, or platform settings.
+We do not sell or share your data. It never leaves your device.
 
-### Third Parties
-- No hydration data is shared with third parties by Sudarshan Tech Labs.
+---
 
-We do **not** share your data with:
-- Data brokers
-- Unrelated advertising networks, unless advertising is explicitly listed above for this app
-- Third parties unrelated to the app features described in this policy
+## Permissions Explained
 
-## Permissions Used
+The App itself asks for three permissions:
 
-### Required Permissions
+| Permission | Why It Is Needed |
+|---|---|
+| `POST_NOTIFICATIONS` | Send hydration reminder notifications |
+| `WAKE_LOCK` | Ensure reminders trigger on time |
+| `VIBRATE` | Haptic feedback for reminders |
 
-* **POST_NOTIFICATIONS**: Used for hydration reminders.
-* **SCHEDULE_EXACT_ALARM, WAKE_LOCK, VIBRATE**: Used for reliable local reminders.
-* **INTERNET and ACCESS_NETWORK_STATE**: Used only for app features that require connectivity, if enabled in the installed version.
+### Permissions added by Android libraries
 
-### Optional Permissions
+The finished app carries five more, declared by the Android libraries it is built on rather than by the App's own code. They still appear in the permission list you see on the Play Store, so they are listed here for completeness:
 
-* Notifications and exact alarms are optional user-controlled reminder features.
+| Permission | Comes from | What it does |
+|---|---|---|
+| `ACCESS_NETWORK_STATE` | WorkManager | Lets a library check whether a network exists. It does **not** grant network access, and without `INTERNET` nothing can be sent |
+| `RECEIVE_BOOT_COMPLETED` | WorkManager | Re-registers your scheduled reminders after the device restarts |
+| `FOREGROUND_SERVICE`, `BIND_JOB_SERVICE` | WorkManager | How Android runs scheduled background work |
+| `DUMP` | a build-time library | Diagnostic permission. Android grants it only to system apps, so it has no effect here |
+
+**`INTERNET` is absent from the finished app**, verified against the merged manifest rather than the App's own file alone. That is what makes the statement at the top of this policy — that the App has no internet access — true of the build you install.
+
+---
 
 ## Your Rights and Controls
 
-### Location Sharing Control
-- No location sharing exists in HydraTrack.
+- **Delete hydration logs:** Use the delete function in the App
+- **Delete all local data:** Uninstall or go to Android Settings > Apps > HydraTrack > Storage > Clear Data
 
-### Account Management
-- No account is required.
-
-### Data Access
-- You can view, edit, or delete hydration logs and preferences in the app.
-
-### GDPR Rights (EU Users)
-If you are in the European Union, you have additional rights:
-- **Right to Access**: Request a copy of your personal data
-- **Right to Rectification**: Correct inaccurate data
-- **Right to Erasure**: Request deletion of your data
-- **Right to Restrict Processing**: Limit how we use your data
-- **Right to Data Portability**: Receive your data in a portable format
-- **Right to Object**: Object to certain types of processing
-
-To exercise these rights, contact us using the methods in the Contact Us section.
-
-### Permissions
-- You can revoke Android permissions in Android Settings -> Apps -> HydraTrack -> Permissions.
-- Browser permissions and storage can be managed in your browser site settings for web apps.
-- Revoking required permissions may prevent related features from functioning.
+---
 
 ## Children's Privacy
 
-- Our app is **not intended for children under 13**.
-- We do not knowingly collect data from children under 13.
-- If you are a parent or guardian and believe your child has provided personal information, please contact us to request deletion.
-- Parents and guardians should supervise children's use of apps that store personal content.
+HydraTrack is not directed at children under 13. We do not knowingly collect personal information from children.
 
-## Security
-
-- Local data is protected by Android, browser, or operating-system app sandboxing.
-- Network communication uses HTTPS/TLS where applicable.
-- Third-party services named in this policy provide their own security controls and privacy policies.
-- You are responsible for protecting your device, browser profile, and account credentials.
-- We do not sell your personal data.
+---
 
 ## Changes to This Policy
 
-We may update this Privacy Policy to reflect new features, legal requirements, or changes in our practices. Significant changes will be:
-- Noted in the app release notes or repository when applicable
-- Reflected with a new "Last updated" date
-- Communicated in the app or project page if the change is significant
+We may update this Privacy Policy from time to time. We will notify you of significant changes via:
 
-The "Last updated" date at the top of this policy indicates when revisions occurred. Continued use of the app after changes constitutes acceptance of the updated policy.
+- In-app notification
+- Updated policy date on this page
+
+Continued use of HydraTrack after changes become effective constitutes your acceptance of the updated policy.
+
+---
 
 ## Contact Us
 
-If you have questions about this Privacy Policy, wish to request data deletion, or have privacy concerns:
+For privacy questions, data access requests, or account deletion:
 
-* **GitHub Repository:** https://github.com/SUDARSHANCHAUDHARI/hydratrack-privacy-policy
-* **Email:** sunny.sudarshan@gmail.com
-* **Main App Repository:** https://github.com/SUDARSHANCHAUDHARI/HydraTrack
-
-We will respond as quickly as possible, typically within 48 hours.
-
-## Data Deletion
-
-### How to Delete Your Account:
-This app does not require an account. You can delete local app data using the options below:
-
-#### Option 1: In-App Deletion
-1. Open HydraTrack
-2. Delete individual entries, reminders, history, or settings where the app provides controls
-3. Or use Android/browser settings to clear app/site data
-4. Uninstalling the app also removes local app-private data
-
-#### Option 2: Email Deletion Request
-Send an email to: **support@sudarshantechlabs.com** or **sunny.sudarshan@gmail.com**
-- Subject: "Data Deletion Request - HydraTrack"
-- Include: The email/account identifier used in the app, if any
-- We will process deletion requests as quickly as possible, typically within 48 hours for acknowledgement
-
-#### Option 3: Web Deletion
-1. Visit the privacy policy website for contact and support information
-2. For browser apps, clear browser storage for the site
-3. For Android apps, clear storage from Android Settings if you want a full local reset
-
-### What Gets Deleted:
-- Local app data stored by the app
-- Local preferences and reminder/history records
-- Cached data controlled by the app or browser
-- Exported/shared files only if you delete them from where you saved them
-
-### Data Retention After Deletion:
-- **Immediate:** clearing app/site data removes local app-private data from your device/browser
-- **Uninstall:** removes app-private local data from Android apps
-- **Exports/shared files:** remain wherever you saved or sent them until you delete them
-
-To request deletion of your data:
-
-1. Open HydraTrack, if installed
-2. Delete local content or clear app/site data where applicable
-3. Contact support via email: sunny.sudarshan@gmail.com
-4. Request account/data deletion and include enough detail for us to identify the app and any account, if one exists
-5. We will confirm what data can be deleted and complete the request according to the retention terms above
-
-## Firebase and Google Services
-
-This app may use the following services depending on the features you enable and the installed version:
-
-- No third-party cloud service is required for core hydration tracking.
-
-Please review relevant third-party privacy policies:
-
-- [Google Privacy Policy](https://policies.google.com/privacy)
-- [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
-- [Google Play Terms](https://play.google.com/about/play-terms/)
-- [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
-
-## About HydraTrack
-
-HydraTrack is built with privacy in mind. The app is built with:
-- Kotlin and Jetpack Compose
-- Room/DataStore for local storage
-- Android notifications and alarms for reminders
-
-The app collects only the data needed for the features described in this policy, and local-first features keep data on your device whenever possible.
+- **Email:** sudarshantechlabs@gmail.com
+- **Developer:** sunny.sudarshan@gmail.com
+- **Website:** https://sudarshantechlabs.com
+- **Response Time:** Within 48 hours
 
 ---
 
-**Last Updated:** May 17, 2026
+## GDPR Rights (EU Users)
+
+If you are in the European Economic Area, you have the right to:
+
+- **Access** — Request a copy of your personal data
+- **Rectification** — Correct inaccurate data
+- **Erasure** — Request deletion of your data
+- **Restrict Processing** — Limit how we use your data
+- **Data Portability** — Receive your data in a portable format
+- **Object** — Object to certain types of processing
+
+To exercise these rights, contact us at the details above.
 
 ---
 
-## Recent Updates (Version 1.1.0 - May 17, 2026)
+## Play Store Data Safety Summary
 
-- **Aligned policy with the shared privacy-policy structure.**
-- **Clarified local hydration logs, reminders, and permissions.**
+| Data type | Collected | Shared | Purpose |
+|---|---|---|---|
+| Hydration logs | No (on-device only) | No | Hydration tracking |
+
+---
+
+---
+
+**This privacy policy complies with:**
+- Google Play Store requirements
+- GDPR (General Data Protection Regulation)
+- CCPA (California Consumer Privacy Act)
+
+**Last reviewed:** 2026-11-08
+
+---
+
+This is the published policy, served at https://sudarshanchaudhari.github.io/hydratrack-privacy-policy/ from the `main` branch of this repository. `index.html` carries the same content for the web and must be updated alongside this file. The copy in the [HydraTrack app repository](https://github.com/SUDARSHANCHAUDHARI/HydraTrack/blob/main/PRIVACY_POLICY.md) is kept identical.
